@@ -23,17 +23,18 @@ function packages() {
   log_header "# --- install packages -------------------------------------------"
   sudo apt-get update
   sudo DEBIAN_FRONTEND=noninteractive apt-get install podman containers-storage podman-compose -y
-  sudo DEBIAN_FRONTEND=noninteractive  apt install -y software-properties-common 
+  sudo DEBIAN_FRONTEND=noninteractive apt install -y software-properties-common 
+  sudo apt-add-repository non-free; sudo dpkg --add-architecture i386; sudo apt update
   sudo DEBIAN_FRONTEND=noninteractive sudo apt install -y steamcmd
 
-  # sudo dpkg --add-architecture i386
+  sudo dpkg --add-architecture i386
   
   sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libgl1-mesa-dri:amd64 \
     libgl1-mesa-dri:i386 \
     libgl1-mesa-glx:amd64 \
     libgl1-mesa-glx:i386 \
-    steam-launcher bzip2
+    steam-installer bzip2
 }
 
 function dst_user() {
@@ -43,13 +44,6 @@ function dst_user() {
   sudo chown -R dst:games /home/dst
   sudo chmod g+rw /home/dst
   sudo chmod g+rwx /home/dst/bin/*.sh
-}
-
-function docker_setup() {
-  log_header "# --- containerized server -------------------------------------------"
-  # clone the dst repo and put in /opt
-  sudo git clone https://github.com/mathielo/dst-dedicated-server.git /opt/dst-dedicated-server
-  sudo chown -R dst:games /opt/dst-dedicated-server
 }
 
 function main() {
@@ -67,7 +61,6 @@ function main() {
 
   packages
   dst_user
-  # docker_setup
 
   if [ ! -d "${dontstarve_dir}" ]; then mkdir -p "${dontstarve_dir}"; fi
   log_header "# --- updating dedi server application -------------------------------------------"
