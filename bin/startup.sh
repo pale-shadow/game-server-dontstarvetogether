@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
-
-# SPDX-FileCopyrightText: ©2025 franklin <franklin@bitsmasher.net>
+#
+# SPDX-FileCopyrightText: ©2025 franklin <smoooth.y62wj@passmail.net>
 #
 # SPDX-License-Identifier: MIT
 
-# v0.2 July 2, 2025 franklin@bitsmasher.net
+# ChangeLog:
+#
+# v0.1 02/25/2025 initial version
+# v0.2 July 2, 2025 franklin
 
 # --- Terminal Colors ---
 LRED='\033[1;31m'
