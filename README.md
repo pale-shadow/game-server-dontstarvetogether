@@ -1,8 +1,7 @@
 # Don't Starve Together - Dedicated Server
 
-* To play on the Dont Starve Together server, start the game on Steam, then look for the server named &quot;wonderland&quot;
-* Streaming live to twitch.tv/s1y\_b0rg 
-* Clone this repo onto your game server.
+* To play on the Dont Starve Together server, start the game on Steam, then
+  look for the server named &quot;wonderland&quot;
 * Create a dedicated user for the game, such as `dst`.
   * make the repo clone the home directory of the new dst user.
 
@@ -10,6 +9,7 @@
 
 ## Get a Cluster Token
 
+- [excellent information on dedicated servers](https://dontstarve.wiki.gg/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers)
 - [this is a good resource](https://github.com/mathielo/dst-dedicated-server/blob/main/docs/ClusterToken.md)
 
 1. Visit the Klei site and choose Steam to login: [https://accounts.klei.com/login](https://accounts.klei.com/login)

@@ -37,7 +37,7 @@ MASTER_NAME="Master"
 CAVE_NAME="Caves"
 CHECK_UPDATE_FREQ="20m"
 DONT_STARVE_CLUSTER_DIR="$HOME/.klei/DoNotStarveTogether"
-DONT_STARVE_DIR="/home/franklin/workspace/game-server-dontstarvetogether/.local/share/Steam/steamapps/common/Don't Starve Together Dedicated Server"
+DONT_STARVE_DIR="/home/dst/workspace/game-server-dontstarvetogether/.local/share/Steam/steamapps/common/Don't Starve Together Dedicated Server"
 lv_file="/tmp/${CLUSTER_NAME}_latest_version"
 DONT_STARVE_BIN="./dontstarve_dedicated_server_nullrenderer_x64"
 
