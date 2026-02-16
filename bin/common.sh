@@ -71,6 +71,12 @@ function check_installed() {
   fi
 }
 
+function check_for_file() {
+  log_info "Check for file: $1"
+  if [ ! -e "$1" ]; then
+    fail "Missing file: $1"
+  fi
+}
 
 function setup_figlet() {
   if ! check_installed figlet; then sudo apt update && sudo apt install figlet -y; fi
