@@ -112,3 +112,13 @@ putl.sh
 compile_commands.json
 util_lua
 .cache
+
+# -- latex build files
+*.aux
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.toc
+

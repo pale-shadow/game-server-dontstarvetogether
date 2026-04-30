@@ -1,6 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#
+# SPDX-FileCopyrightText: ©2025 franklin <smoooth.y62wj@passmail.net>
+#
+# SPDX-License-Identifier: MIT
 
-DST_SERVER_DIR="${HOME}/.local/share/Steam"
+# ChangeLog:
+#
+# v0.1 02/25/2025 initial version
+
+
+DST_SERVER_DIR="/home/dst/.local/share/Steam"
 STEAM_USER="${STEAM_USER}"
 STEAM_PASS="${STEAM_PASS}" # Be careful with this!
 
@@ -24,7 +33,7 @@ exit 0
 echo "Killing DST session(s) ..."
 screen -ls | grep DST | cut -d. -f1 | awk '{print $1}' | xargs kill
 echo "Session killed, will now update DST..."
-cd ~/steamcmd/ && ./steamcmd.sh +@ShutdownOnFailedCommand 1 +@NoPromptForPassword 1 +login anonymous +force_install_dir /home/steam/steamapps/DST +app_update 343050 validate
+cd ~/steamcmd/ && ./steamcmd.sh +@ShutdownOnFailedCommand 1 +@NoPromptForPassword 1 +login anonymous +force_install_dir /home/dst/steamapps/DST +app_update 343050 validate
 +quit
 echo "Update completed, will now start the server..."
 ~/DST_Server/start_dst.sh

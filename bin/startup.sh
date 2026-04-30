@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
-
-# SPDX-FileCopyrightText: ©2025 franklin <franklin@bitsmasher.net>
+#
+# SPDX-FileCopyrightText: ©2025 franklin <smoooth.y62wj@passmail.net>
 #
 # SPDX-License-Identifier: MIT
 
-# v0.2 July 2, 2025 franklin@bitsmasher.net
+# ChangeLog:
+#
+# v0.1 02/25/2025 initial version
+# v0.2 July 2, 2025 franklin
 
 # --- Terminal Colors ---
 LRED='\033[1;31m'
@@ -33,8 +36,8 @@ CLUSTER_NAME="MyDediServer"
 MASTER_NAME="Master"
 CAVE_NAME="Caves"
 CHECK_UPDATE_FREQ="20m"
-DONT_STARVE_CLUSTER_DIR="$HOME/.klei/DoNotStarveTogether"
-DONT_STARVE_DIR="/home/franklin/workspace/game-server-dontstarvetogether/.local/share/Steam/steamapps/common/Don't Starve Together Dedicated Server"
+DONT_STARVE_CLUSTER_DIR="/home/dst/.klei/DoNotStarveTogether"
+DONT_STARVE_DIR="/home/dst/.local/share/Steam/steamapps/common/Don't Starve Together Dedicated Server"
 lv_file="/tmp/${CLUSTER_NAME}_latest_version"
 DONT_STARVE_BIN="./dontstarve_dedicated_server_nullrenderer_x64"
 
