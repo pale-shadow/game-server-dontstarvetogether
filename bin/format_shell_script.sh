@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 #
-# SPDX-FileCopyrightText: © 2022-2025 franklin <franklin@bitsmasher.net>
+# SPDX-FileCopyrightText: ©2025 franklin <smoooth.y62wj@passmail.net>
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
+
+# ChangeLog:
+#
+# v0.1 02/25/2025 initial version
+
 
 # This script formats shell scripts using shfmt, ensuring consistent style.
 # It checks for shfmt installation, installs it if missing, and then

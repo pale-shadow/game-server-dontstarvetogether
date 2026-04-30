@@ -1,12 +1,22 @@
 # Don't Starve Together - Dedicated Server
 
-* To play on the Dont Starve Together server, start the game on Steam, then look for the server named &quot;wonderland&quot;
-* Streaming live to twitch.tv/s1y\_b0rg 
-* Clone this repo onto your game server.
+* To play on the Dont Starve Together server, start the game on Steam, then
+  look for the server named &quot;wonderland&quot;
 * Create a dedicated user for the game, such as `dst`.
   * make the repo clone the home directory of the new dst user.
 
 ![dst](https://github.com/devsecfranklin/game-server-dontstarvetogether/blob/main/images/dst-personajes.jpg)
+
+## Get a Cluster Token
+
+- [excellent information on dedicated servers](https://dontstarve.wiki.gg/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers)
+- [this is a good resource](https://github.com/mathielo/dst-dedicated-server/blob/main/docs/ClusterToken.md)
+
+1. Visit the Klei site and choose Steam to login: [https://accounts.klei.com/login](https://accounts.klei.com/login)
+2. Link your steam account to your Klei account.
+3. Select the games link at the top, then click the "game servers" button on the dont starve together tile.
+4. Now add a new server, or get the Cluster Token for an existing server.
+5. Add the `CLUSTER_TOKEN` to the environment vars, or the `.envrc` file. DO not check this file into github.
 
 ## Install `direnv`
 
@@ -23,9 +33,16 @@ line is mandatory!
 
 ```sh
 export CLUSTER_TOKEN="pef-g^KU_QrGp3bke^uerRdBrRFyKING2q9zypelrosOjFYc1g="
-export INSTALL_PATH="/opt/fyp_dist" # this is just for temporary testing, update for game server
 export FYP_OPTIONS="-DFYP_CCACHE=ON"
 export CXXFLAGS="-std=c++11"
+```
+
+## install game server files via steamcmd
+
+- install `steamcmd` then run this command to install the server files
+
+```sh
+ steamcmd +login anonymous +app_update 343050 validate +quit
 ```
 
 ## Edit config files
@@ -49,7 +66,7 @@ sure to run them in this order.
 
 ```sh
 ./bin/bootstrap.sh
-./saves/gen_mod_override.sh
+cd saves && ./gen_mod_override.sh && cd -
 ./bin/run_dedicated_server.sh
 ```
 
