@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0 # Fetches all history for comprehensive documentation
 
@@ -29,7 +29,7 @@ jobs:
         run: doxygen Doxyfile # Assuming Doxyfile is in the root
 
       - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: 'html' # This should match the OUTPUT_DIRECTORY in your Doxyfile, e.g., 'docs/doxygen_html' if you set it that way
 
