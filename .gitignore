@@ -10,6 +10,9 @@ compile_commands.json
 CTestTestfile.cmake
 deps
 
+Steam/
+steamcmd/
+
 # This is a minimal list, OK to add things per repo
 # mac specific
 .DS_Store
@@ -63,6 +66,8 @@ server_chat_log*
 .klei/DoNotStarveTogether/MyDediServer/Master/server_log.txt
 #.klei/DoNotStarveTogether/MyDediServer/Caves/save
 #.klei/DoNotStarveTogether/MyDediServer/Master/save
+.klei/DoNotStarveTogether/MyDediServer/Master/save/session/
+.klei/DoNotStarveTogether/MyDediServer/Caves/save/session/
 
 # Palo auth codes
 authcodes
