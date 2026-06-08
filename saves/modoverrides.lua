@@ -5,10 +5,6 @@ return {
         configuration_options={ },
         enabled=true
     },
-    ["workshop-373991022"]={
-        configuration_options={ },
-        enabled=true
-    },
     ["workshop-3361016346"]={
         configuration_options={ },
         enabled=true
