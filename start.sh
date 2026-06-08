@@ -18,14 +18,17 @@
 LRED='\033[0;31m'
 NC='\033[0m' # No Color
 SERVER_DIR="/home/dst"
-DST_SERVER_DIR="${SERVER_DIR}/.local/share/Steam/steamapps/common/Don\'t\ Starve\ Together\ Dedicated\ Server"
+DST_SERVER_DIR="${SERVER_DIR}/Steam/steamapps/common/Don\'t\ Starve\ Together\ Dedicated\ Server"
 cluster_name="MyDediServer"
 dontstarve_dir="${SERVER_DIR}/.klei/DoNotStarveTogether"
 
 function game_update() {
   log_header "Updating game server files from Steam"
-  # steamcmd +force_install_dir "$install_dir" +login anonymous +app_update 343050 validate +quit
-  steamcmd +login "$STEAM_USER" "$STEAM_PASS" +app_update 343050 validate +quit
+  # /home/dst/steamcmd/linux32/steamcmd +force_install_dir "$install_dir" +login anonymous +app_update 343050 validate +quit
+  /home/dst/steamcmd/linux32/steamcmd +login "$STEAM_USER" "$STEAM_PASS" +app_update 343050 validate +quit
+
+  # remove cache and reinstall files (use when corrupted)
+  # rm -rf ~/.steam ~/.local/share/Steam ~/.steamcmd && mkdir -p ~/steamcmd && cd ~/steamcmd && wget -qO- https://steamcdn-a.akamaihd.net/client/installer/steamcmd\_linux.tar.gz | tar -xzvf - && ./steamcmd.sh +login anonymous +app_update 343050 validate +quit
 }
 
 function set_password() {
@@ -79,7 +82,7 @@ function main() {
 
   log_header "Starting the server."
 
-  pushd "${SERVER_DIR}/.local/share/Steam/steamapps/common/Don't Starve Together Dedicated Server/bin64"
+  pushd "${SERVER_DIR}/Steam/steamapps/common/Don't Starve Together Dedicated Server/bin64"
   log_info "Start servers"
 
   run_shared=(./dontstarve_dedicated_server_nullrenderer_x64)

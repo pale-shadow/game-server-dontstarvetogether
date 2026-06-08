@@ -59,8 +59,8 @@ function main() {
   fi
   log_info "successfully sourced common.sh" && echo -e "\n"
 
-  packages
-  dst_user
+  #packages
+  #dst_user
 
   if [ ! -d "${dontstarve_dir}" ]; then mkdir -p "${dontstarve_dir}"; fi
   log_header "# --- updating dedi server application -------------------------------------------"
