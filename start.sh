@@ -39,21 +39,21 @@ function set_password() {
 
 function mod_override(){
   log_header "Installing modoverrides.lua"
-  cp ${SERVER_DIR}/saves/modoverrides.lua "${dontstarve_dir}/${cluster_name}/Master"
-  # cp ${SERVER_DIR}/saves/modoverrides.lua "${dontstarve_dir}/${cluster_name}/Caves"
-  cp ${SERVER_DIR}/saves/modoverrides.lua ${SERVER_DIR}/saves/dedicated_server_mods_setup.lua "${DST_SERVER_DIR}/mods"
+  cp ${SERVER_DIR}/config/modoverrides.lua "${dontstarve_dir}/${cluster_name}/Master"
+  # cp ${SERVER_DIR}/config/modoverrides.lua "${dontstarve_dir}/${cluster_name}/Caves"
+  cp ${SERVER_DIR}/config/modoverrides.lua ${SERVER_DIR}/config/dedicated_server_mods_setup.lua "${DST_SERVER_DIR}/mods"
 }
 
 function config_shards() {
   log_header "COnfigure the shards"
-  cp ${SERVER_DIR}/saves/dedicated_server_mods_setup.lua "${dontstarve_dir}/${cluster_name}"
+  cp ${SERVER_DIR}/config/dedicated_server_mods_setup.lua "${dontstarve_dir}/${cluster_name}"
   log_header "Copying worldgenoverride.lua"
   # ${dontstarve_dir}/${cluster_name}/worldgenoverride.lua
-  cp ${SERVER_DIR}/saves/worldgenoverride.lua "${dontstarve_dir}/${cluster_name}"
+  cp ${SERVER_DIR}/config/worldgenoverride.lua "${dontstarve_dir}/${cluster_name}"
   log_header "Copying cluster token into server files"
   echo "${CLUSTER_TOKEN}" >"${dontstarve_dir}/${cluster_name}/cluster_token.txt"
   check_for_file "$dontstarve_dir/$cluster_name/cluster_token.txt"
-  cp "$${SERVER_DIR}/saves/cluster.ini" "${dontstarve_dir}/${cluster_name}/cluster.ini"
+  cp "$${SERVER_DIR}/config/cluster.ini" "${dontstarve_dir}/${cluster_name}/cluster.ini"
 
 }
 
