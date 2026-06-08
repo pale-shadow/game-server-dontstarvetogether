@@ -2,7 +2,7 @@ KLEI     1 return {
   enabled_mods={
     ["workshop-1077747217"]={
       configuration_options={
-        ANNOUNCEMENT_INTERVAL=45,
+        ANNOUNCEMENT_INTERVAL=95,
         ANNOUNCEMENT_SWITCH=true,
         ANNOUNCEMENT_TEXTS={
           "[SYSOPS] you have no chance to survive make your time",
@@ -11,7 +11,7 @@ KLEI     1 return {
           "[SYSOPS] watch the game stream at https://www.twitch.tv/s1y_b0rg" 
         },
         ANNOUNCE_FIRST_TIME_JOIN="welcome to the struggle",
-        SPEAK_DURATION_SHOW=5,
+        SPEAK_DURATION_SHOW=90,
         SPEAK_EVERY_TIME_JOIN="welcome to wonderland",
         SPEAK_FIRST_TIME_JOIN="welcome to wonderland",
         SPEAK_ON_DEATH="i cant believe i died last night",
@@ -24,7 +24,6 @@ KLEI     1 return {
     ["workshop-2880198735"]={ configuration_options={  }, enabled=true },
     ["workshop-3138571948"]={ configuration_options={  }, enabled=true },
     ["workshop-3361016346"]={ configuration_options={  }, enabled=true },
-    ["workshop-373991022"]={ configuration_options={  }, enabled=true },
     ["workshop-398858801"]={ configuration_options={  }, enabled=true } 
   },
   server={

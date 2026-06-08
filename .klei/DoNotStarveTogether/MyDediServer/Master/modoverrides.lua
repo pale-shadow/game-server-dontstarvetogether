@@ -5,10 +5,6 @@ return {
         configuration_options={ },
         enabled=true
     },
-    ["workshop-373991022"]={
-        configuration_options={ },
-        enabled=true
-    },
     ["workshop-3361016346"]={
         configuration_options={ },
         enabled=true
@@ -28,7 +24,7 @@ return {
     ["workshop-1077747217"] = {
         enabled = true,
         configuration_options = {
-            ANNOUNCEMENT_INTERVAL=45,
+            ANNOUNCEMENT_INTERVAL=95,
             ANNOUNCEMENT_SWITCH = true,
             ANNOUNCEMENT_TEXTS = {
                 "[SYSOPS] you have no chance to survive make your time",
@@ -37,7 +33,7 @@ return {
                 "[SYSOPS] watch the game stream at https://www.twitch.tv/s1y_b0rg"
             },
             ANNOUNCE_FIRST_TIME_JOIN = "welcome to the struggle", 
-            SPEAK_DURATION_SHOW = 5,
+            SPEAK_DURATION_SHOW = 90,
             SPEAK_FIRST_TIME_JOIN = "welcome to wonderland",
             SPEAK_EVERY_TIME_JOIN = "welcome to wonderland",
             SPEAK_ON_DEATH = "i cant believe i died last night" , -- Death Say Text
