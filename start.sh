@@ -53,7 +53,7 @@ function config_shards() {
   log_header "Copying cluster token into server files"
   echo "${CLUSTER_TOKEN}" >"${dontstarve_dir}/${cluster_name}/cluster_token.txt"
   check_for_file "$dontstarve_dir/$cluster_name/cluster_token.txt"
-  cp "$${SERVER_DIR}/config/cluster.ini" "${dontstarve_dir}/${cluster_name}/cluster.ini"
+  cp "${SERVER_DIR}/config/cluster.ini" "${dontstarve_dir}/${cluster_name}/cluster.ini"
 
 }
 
