@@ -1,72 +1,52 @@
--- SPDX-FileCopyrightText: ©2025 franklin <franklin@bitsmasher.net>
---
--- SPDX-License-Identifier: MIT
-
+--- @file modoverrides.lua
+-- @brief This file determines which mods to load. It must be identical for each shard. 
 return {
-    ["workshop-632082897"]={
-        configuration_options={ },
-        enabled=true
-    },
     ["workshop-3138571948"]={
         configuration_options={ },
         enabled=true
     },
-    ["workshop-714712361"]={
+    ["workshop-3361016346"]={
         configuration_options={ },
         enabled=true
     },
-    ["workshop-1077747217"]={configuration_options={
-        ANNOUNCE_OPEN = true , -- Announce
-	SAY_OPEN = true , -- Say
-	ANNOUNCE_CD = 20 , -- Announce Interval (min)
-	ANNOUNCE_ORDER = true , -- Announce Order
-	SAY_SHOWTIME = 3 , -- Say Show Time(sec)
-	SAY_DELAY = 1 , -- Say Delay (sec)
-	ANNOUNCE_TEXT = {
-		-- Random players:%pds days %pns name, the number of players:%nws world %ncs cave.
-		"we are streaming live at https://twitch.tv/s1y_b0rg",
-		"thanks for playing!",
-	} , -- Announce Message
-		ANNOUNCE_FIRSTJION_TEXT = "everybody act cool, %pds is here" , -- First Join Announce Text
-		SAY_FIRSTJION_TEXT = "welcome %pns. we are streaming live at https://twitch.tv/s1y_b0rg" , -- First Join Say Text
-		SAY_EVERYJION_TEXT = "welcome back %pns, nerd. time to die." , -- Every Join Say Text
-		SAY_DEATH_TEXT = "%pns u dead lol" , -- Death Say Text
-		SAY_RESURRECTION_TEXT = "%pns returns from beyond the grave!" , -- Resurrection Say Text
-    }, enabled=true },
-    ["workshop-375859599"]={
+    ["workshop-1751811434"]={
         configuration_options={ },
         enabled=true
     },
-    ["workshop-347079953"]={
+    ["workshop-2880198735"]={
         configuration_options={ },
         enabled=true
     },
-    ["workshop-382177939"]={
+    ["workshop-1077747217"]={
         configuration_options={ },
         enabled=true
     },
-    ["workshop-450498063"]={
+    ["workshop-2078243581"]={
         configuration_options={ },
         enabled=true
     },
-    ["workshop-375850593"]={
+    ["workshop-1207269058"]={
         configuration_options={ },
         enabled=true
     },
-    ["workshop-362175979"]={
-        configuration_options={ },
-        enabled=true
-    },
-    ["workshop-439115156"]={
-        configuration_options={ },
-        enabled=true
-    },
-    ["workshop-364491382"]={
-        configuration_options={ },
-        enabled=true
-    },
-    ["workshop-351325790"]={
-        configuration_options={ },
-        enabled=true
+    ["workshop-1077747217"] = {
+        enabled = true,
+        configuration_options = {
+            ANNOUNCEMENT_INTERVAL=45,
+            ANNOUNCEMENT_SWITCH = true,
+            ANNOUNCEMENT_TEXTS = {
+                "[SYSOPS] you have no chance to survive make your time",
+                "[SYSOPS] all your base are belong to us", --  survive %pds days!",
+                "[SYSOPS] server name is wonderland if you want tojoin the game",
+                "[SYSOPS] watch the game stream at https://www.twitch.tv/s1y_b0rg"
+            },
+            ANNOUNCE_FIRST_TIME_JOIN = "welcome to the struggle", 
+            SPEAK_DURATION_SHOW = 5,
+            SPEAK_FIRST_TIME_JOIN = "welcome to wonderland",
+            SPEAK_EVERY_TIME_JOIN = "welcome to wonderland",
+            SPEAK_ON_DEATH = "i cant believe i died last night" , -- Death Say Text
+            SPEAK_ON__RESURRECT = "I LIVE" , -- Resurrection Say Text
+            SPEAK_SWITCH=true
+        }
     }
 }
