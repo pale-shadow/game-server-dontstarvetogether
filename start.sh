@@ -21,6 +21,7 @@ SERVER_DIR="/home/dst"
 DST_SERVER_DIR="${SERVER_DIR}/Steam/steamapps/common/Don\'t\ Starve\ Together\ Dedicated\ Server"
 cluster_name="MyDediServer"
 dontstarve_dir="${SERVER_DIR}/.klei/DoNotStarveTogether"
+SCREEN_NAME="dont-starve"
 
 game_update() {
   log_header "Updating game server files from Steam"
@@ -84,8 +85,7 @@ main() {
   run_shared=(./dontstarve_dedicated_server_nullrenderer_x64)
   run_shared+=(-cluster "$cluster_name")
   
-  "${run_shared[@]}" -shard Caves | sed 's/^/Caves:  /' &
-  "${run_shared[@]}" -shard Master | sed 's/^/Master: /'
+  "${run_shared[@]}" -shard Caves | sed 's/^/Caves:  /' & "${run_shared[@]}" -shard Master | sed 's/^/Master: /'
 
   popd >> /dev/null || exit 1
   log_info "done!"

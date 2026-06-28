@@ -35,13 +35,13 @@ KLEI     1 return {
     max_players=16,
     name="wonderland",
     online_mode=true,
-    password="malware",
+    password="",
     playstyle="survival",
     privacy_type=0,
     pvp=false,
     server_language="en" 
   },
-  session_id="A63BCA89F7B4D8B2",
+  session_id="7E35D26677CEC5AC",
   version=5,
   world={
     options={
